@@ -8,14 +8,16 @@ public class Hanoi {
 			System.out.println(toh.towers[2].disks.pop());
 		}
 	}
+
 }
 
 class Tower {
-	Stack <Integer> disks;
+	Stack<Integer> disks;
 
 	Tower(int ndisks) {
 		disks = new Stack <>(ndisks);
 	}
+
 }
 
 class TOH {
@@ -42,9 +44,10 @@ class TOH {
 		if (towers[source].disks.isEmpty()) System.out.println("Tower is empty!");
 		else move(n, towers[source], towers[destination], towers[buffer]);
 	}
+
 }
 
-class Stack <T> {
+class Stack<T> {
 	int top = -1;
 	T[] elements;
 
@@ -83,4 +86,5 @@ class Stack <T> {
 	public boolean isEmpty() {
 		return top == -1;
 	}
+
 }

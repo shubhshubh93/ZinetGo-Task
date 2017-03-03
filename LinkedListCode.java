@@ -13,16 +13,16 @@ public class LinkedListCode {
 		prev.next = null;
 	}
 
-	private static <T> LinkedList <T> .Node selectMiddleNode(LinkedList <T> ll, int index) {
-		LinkedList <T> .Node node = ll.head;
+	private static <T> LinkedList<T>.Node selectMiddleNode(LinkedList <T> ll, int index) {
+		LinkedList<T>.Node node = ll.head;
 		for (int i = 0; node.next != null && i <= index - 1; ++i) {
 			node = node.next;
 		}
 		return node;
 	}
 
-	public static <T> LinkedList <T> buildList(T[] a) {
-		LinkedList <T> ll = new LinkedList <>();
+	public static <T> LinkedList<T> buildList(T[] a) {
+		LinkedList<T> ll = new LinkedList<>();
 		for (T t: a) {
 			ll.add(t);
 		}
@@ -30,22 +30,16 @@ public class LinkedListCode {
 	}
 
 	public static void main(String[] args) {
-		Character array[] = new Character[] {
-			'A',
-			'B',
-			'C',
-			'D',
-			'E'
-		};
+		Character array[] = new Character[] {'A','B','C','D','E'};
 		LinkedList <Character> ll = buildList(array);
 		LinkedList <Character> .Node node = selectMiddleNode(ll, 2);
 		deleteMiddleNode(node);
 		System.out.println(ll);
 	}
+	
 }
 
 class LinkedList <T> {
-
 	Node head;
 
 	class Node {
@@ -83,4 +77,5 @@ class LinkedList <T> {
 		}
 		return bf.toString();
 	}
+
 }

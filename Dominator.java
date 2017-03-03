@@ -17,12 +17,11 @@ public class Dominator {
 
 		int ret = 0;
 		int cand = A[pos];
-
 		int[] E = new int[A.length];
 		int[] N = new int[A.length];
-
 		int ec = 0;
 		int nc = 0;
+
 		for (int i = 0; i < A.length; i++) {
 			if (A[i] == cand) {
 				ec++;
@@ -44,11 +43,7 @@ public class Dominator {
 
 	public static void main(String[] args) {
 		Dominator Domi = new Dominator();
-		int a[] = { - 1,
-			3,
-			3,
-			3
-		};
+		int a[] = {3,4,3,2,3,-1,3,3};
 		System.out.println(Domi.sol(a));
 	}
 
